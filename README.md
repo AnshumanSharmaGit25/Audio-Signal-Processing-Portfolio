@@ -1,19 +1,64 @@
 # Audio Signal Processing & DSP Portfolio
 
-This repository tracks my hands-on implementation of digital signal processing (DSP) concepts, focusing on electroacoustics, signal analysis, and algorithmic audio filtering in Python. It serves as a living log of my technical progression toward audio acoustics and hardware tuning engineering.
+This repository tracks my hands-on implementation of digital signal processing (DSP) concepts, focusing on electroacoustics, signal analysis, and algorithmic audio filtering in Python.
 
-## Progress Log
+## Automated Progress Log
 
-### October 4–5, 2026: Fundamental DSP & Spectral Analysis
 
-*   **`sine_wave_generator.py`**: Built a fundamental waveform generator to manipulate time-domain signals, sampling rates, and bit depth natively in Python.
-*   **`complex_sinusoid.ipynb`**: An interactive notebook detailing the mathematical generation of complex sinusoids. It utilizes real and imaginary components to represent amplitude and phase, establishing the foundation for phase alignment and advanced frequency analysis.
-*   **`DFT_IDFT_implementation.ipynb`**: A step-by-step notebook implementation of the Discrete Fourier Transform (DFT) and Inverse Discrete Fourier Transform (IDFT) from scratch. This mathematically converts audio arrays between the time and frequency domains, demonstrating the core calculus behind spectral analysis before relying on pre-built FFT libraries.
+### `Ex1.ipynb`
+
+# Exercise 1: Python and sounds
+
+## Summary
+
+This exercise introduces fundamental audio signal processing concepts in Python. You'll learn how to read WAV files, perform basic audio operations, work with NumPy array indexing, and understand the effects of downsampling on audio signals.
+
+The exercise consists of four practical parts:
+1. Reading audio files and extracting sample slices
+2. Finding minimum and maximum amplitude values
+3. Mastering Python array indexing with the hop operation
+4. Implementing downsampling and observing its effects on different signals
+
+## Skills Learned
+
+### Core Concepts
+- **Audio File I/O**: Reading WAV files using the `wavread()` function from sms-tools
+- **Audio Normalization**: Understanding why floating-point values in [-1, 1] are preferred over raw 16-bit integers
+- **Sampling Rate**: Grasping the relationship between sampling rate (Hz) and time
+
+### Python Fundamentals
+- **Array Slicing**: Using NumPy slicing syntax `x[start:stop]` to extract contiguous subarrays
+- **Tuple Unpacking**: Extracting multiple return values using `x, fs = wavread(file)`
+- **NumPy Operations**: Using NumPy functions like `min()`, `max()`, and array indexing
+- **List Comprehension & Indexing**: Extracting every Mth element efficiently
+
+### Signal Processing
+- **Downsampling**: Reducing the sampling rate by a factor M and observing aliasing effects
+- **Nyquist Theorem**: Understanding the maximum representable frequency after downsampling
+- **Aliasing**: Observing how high-frequency components fold back into lower frequencies when undersampled
+- **Anti-aliasing**: Conceptually understanding why filtering before downsampling is necessary
+
+### Practical Skills
+- Working with Jupyter notebooks for interactive audio exploration
+- Plotting waveforms with time-axis labels
+- Playing audio directly from NumPy arrays
+- Comparing audio quality degradation across different signal types
+
+## Key Takeaways
+
+By completing this exercise, you understand:
+- How digital audio is represented and manipulated in Python
+- The critical importance of sampling rate in audio processing
+- How improper downsampling introduces artifacts (aliasing)
+- The mathematical relationship between sampling rate, Nyquist frequency, and representable harmonics
+
+---
+
 
 ## Technical Stack
-*   **Languages:** Python
-*   **Libraries:** `NumPy`, `Matplotlib`
-*   **Core Concepts:** Time/Frequency domain transformations, DFT/IDFT, complex sinusoids, discrete-time signal processing.
+* **Languages:** Python
+* **Libraries:** `NumPy`, `Matplotlib`
+* **Focus:** Audio Acoustics, Electroacoustics, Signal Processing
 
 ## About the Developer
-I am a B.Tech Electronics and Communication Engineering student bridging the gap between the subjective art of audio production and the objective science of embedded DSP. Drawing on my practical experience mixing and mastering audio, I use this repository to translate my critical listening skills into the mathematical signal processing frameworks required for system-level hardware tuning.
+B.Tech Electronics & Communication Engineering student bridging audio production and embedded DSP systems.
